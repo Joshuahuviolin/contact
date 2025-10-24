@@ -86,19 +86,43 @@
         .profile-image-container {
             margin-bottom: 30px;
             position: relative;
-            width: 200px;
-            height: 200px;
+            width: 220px;
+            height: 220px;
             margin-left: auto;
             margin-right: auto;
+            padding: 10px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
+            border-radius: 25px;
+            box-shadow: 0 15px 50px rgba(255, 255, 255, 0.15),
+                        inset 0 2px 10px rgba(255, 255, 255, 0.1);
+            animation: glow 3s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 15px 50px rgba(255, 255, 255, 0.15),
+                            inset 0 2px 10px rgba(255, 255, 255, 0.1),
+                            0 0 20px rgba(255, 255, 255, 0.1);
+            }
+            50% {
+                box-shadow: 0 15px 50px rgba(255, 255, 255, 0.25),
+                            inset 0 2px 10px rgba(255, 255, 255, 0.2),
+                            0 0 40px rgba(255, 255, 255, 0.2);
+            }
         }
 
         .profile-image {
             width: 100%;
             height: 100%;
-            border-radius: 15px;
+            border-radius: 18px;
             object-fit: cover;
-            border: 4px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+            border: 3px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
         }
 
         .name {
@@ -216,10 +240,9 @@
             <div class="profile-card">
                 <div class="profile-image-container">
                     <img 
-                        src="joshua-hu.png" 
+                        src="profile.jpg" 
                         alt="Joshua Hu" 
                         class="profile-image"
-                        onerror="console.error('Image failed to load:', this.src)"
                     />
                 </div>
                 
