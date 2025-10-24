@@ -1,0 +1,23 @@
+.music-note {
+  position: absolute;
+  color: #ffffff;
+  animation: float-up infinite ease-in;
+  bottom: -50px;
+  user-select: none;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes float-up {
+  0% {
+    bottom: -50px;
+    transform: translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(100px) rotate(180deg);
+  }
+  100% {
+    bottom: 110vh;
+    transform: translateX(-100px) rotate(360deg);
+  }
+}
+
